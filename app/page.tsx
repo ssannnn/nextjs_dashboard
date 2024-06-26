@@ -1,6 +1,12 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import localFont from 'next/font/local'
+
+
+const superBrain = localFont({
+  src: './fonts/SuperBrain.woff2',
+  });
 
 export default function Page() {
   return (
@@ -13,7 +19,7 @@ export default function Page() {
         <div
           className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black"
         />  
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+          <p className={`${superBrain.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
